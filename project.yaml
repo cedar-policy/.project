@@ -1,25 +1,23 @@
 # .project metadata for Cedar
 # Documentation: https://github.com/cncf/automation/tree/main/utilities/dot-project
 
-# TODO: Set slack_channels
 # TODO: Add adopters list (ADOPTERS.md)
-# TODO: Add package_managers if distributed via registries
 
 schema_version: "1.0.0"
 slug: "cedar"
 name: "Cedar"
-description: "Cedar is an open source authorization policy language that enables developers to express fine-grained permissions as easy-to-understand policies enforced in their applications, and decouple access control from application logic. Cedar is designed to be ergonomic, fast, safe, and analyzable using automated reasoning. Cedar's simple and intuitive syntax supports common authorization use-cases with readable policies, naturally expressing concepts from role-based, attribute-based, and relation-based access control models. Cedar's policy structure enables authorization requests to be decided quickly. Its policy validator uses optional typing to help policy writers avoid mistakes, but not get in their way. Cedar's design has been finely balanced to allow for a sound, complete, and decidable logical encoding, which enables precise automated analysis of Cedar policies, e.g., to ensure that policy refactoring preserves existing permissions. Cedar's language specification has been formally verified using a theorem prover to satisfy key security properties like "deny trumps allow," and its implementation in Rust undergoes rigorous differential random testing against its formal specification. By combining mathematical rigor with developer-friendly design, Cedar offers a practical approach to secure, maintainable authorization for modern applications."
+description: "Cedar is an open source authorization policy language that enables developers to express fine-grained permissions as easy-to-understand policies enforced in their applications, and decouple access control from application logic. Cedar is designed to be ergonomic, fast, safe, and analyzable using automated reasoning. Cedar's simple and intuitive syntax supports common authorization use-cases with readable policies, naturally expressing concepts from role-based, attribute-based, and relation-based access control models. Cedar's policy structure enables authorization requests to be decided quickly. Its policy validator uses optional typing to help policy writers avoid mistakes, but not get in their way. Cedar's design has been finely balanced to allow for a sound, complete, and decidable logical encoding, which enables precise automated analysis of Cedar policies, e.g., to ensure that policy refactoring preserves existing permissions. Cedar's language specification has been formally verified using a theorem prover to satisfy key security properties like `deny trumps allow,` and its implementation in Rust undergoes rigorous differential random testing against its formal specification. By combining mathematical rigor with developer-friendly design, Cedar offers a practical approach to secure, maintainable authorization for modern applications."
 type: "project"
-project_lead: "D-McAdams" # TODO: AUTO-DETECTED — please verify
-# TODO: Set CNCF Slack channel(s)
-# slack_channels:
-#   - name: "#cedar"
-#     primary: true
+project_lead: "john-h-kastner-aws" # TODO: AUTO-DETECTED — please verify
+
+slack_channels:
+  - name: "#cedar-general"
+    primary: true
 
 maturity_log:
   - phase: "sandbox"
     date: "2025-10-08T00:00:00Z"
-    issue: "https://github.com/cncf/sandbox/issues/410" # TODO: AUTO-DETECTED — please verify
+    issue: "https://github.com/cncf/sandbox/issues/410"
 
 repositories:
   - "https://github.com/cedar-policy/cedar"
@@ -32,11 +30,9 @@ artwork: "https://landscape.cncf.io/logos/cedar.svg"
 # adopters:
 #   path: "https://github.com/cedar-policy/cedar/blob/main/ADOPTERS.md"
 
-
-# TODO: Add package manager identifiers if your project is distributed via registries
-# package_managers:
-#   docker: "cedar-policy/cedar"
-
+package_managers:
+  crates: "cedar-policy"
+  npm: "cedar-policy/cedar-wasm"
 
 security:
   policy:
@@ -54,8 +50,8 @@ legal:
   license:
     path: "https://github.com/cedar-policy/cedar/blob/main/LICENSE"
   identity_type:
-    has_dco: true # AUTO-DETECTED — please verify
-    has_cla: false # AUTO-DETECTED — please verify
+    has_dco: true
+    has_cla: false
     dco_url:
       path: "https://developercertificate.org/"
 
